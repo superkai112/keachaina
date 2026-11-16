@@ -7,3 +7,4 @@ README*
 .gitignore
 src/
 wrangler.jsonc
+.assetsignore
