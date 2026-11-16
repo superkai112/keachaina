@@ -322,16 +322,20 @@ document.getElementById("orderForm").addEventListener("submit",async e=>{
   if(!Object.keys(cart).length){alert(words[language].emptyAlert);return}
   const form=e.currentTarget;
   const submitButton=form.querySelector('button[type="submit"]');
-  const lines=Object.entries(cart).map(([id,qty])=>{const p=products.find(x=>x.id===Number(id));return `${language==="km"?p.km:p.name} x ${qty} — ${money(p.price*qty)}`});
-  const total=Object.entries(cart).reduce((s,[id,q])=>s+products.find(p=>p.id===Number(id)).price*q,0);
-  const msg=`${language==="km"?"ការកម្មង់ KEO CHAINA":"KEO CHAINA ORDER"}\n${words[language].yourName}: ${document.getElementById("customer").value}\n${words[language].phone}: ${document.getElementById("phone").value}\n${words[language].method}: ${document.getElementById("delivery").value}\n\n${lines.join("\n")}\n\n${words[language].total}: ${money(total)}`;
+  const order={
+    customer:document.getElementById("customer").value.trim(),
+    phone:document.getElementById("phone").value.trim(),
+    delivery:document.getElementById("delivery").value,
+    language,
+    items:Object.entries(cart).map(([id,quantity])=>({id:Number(id),quantity}))
+  };
   submitButton.disabled=true;
   submitButton.textContent=orderStatus[language].sending;
   try{
     const response=await fetch("/api/order",{
       method:"POST",
       headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({text:msg})
+      body:JSON.stringify(order)
     });
     const result=await response.json();
     if(!response.ok||!result.ok)throw new Error("Telegram order request failed.");
