@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b2d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta name="description" content="Shop fresh seafood and quality rice at KEOCHAINA.">
+  <title>កែវ ឆៃណា | គ្រឿងសមុទ្រ និងអង្ករ</title>
+  <style>
+    :root{--green:#123b2d;--green2:#1c6047;--cream:#f7f3e9;--ink:#17231d;--muted:#68756e;--line:#e5dfcf;--white:#fff;--gold:#c5a45a}
+    *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Noto Sans Khmer",Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}button,input,select{font:inherit}
+    .top{background:var(--green);color:#f4e9c9;text-align:center;padding:10px 16px;font-size:12px;letter-spacing:.04em;border-bottom:2px solid var(--gold)}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+    .nav{max-width:1160px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.12em;color:var(--green);font-size:12px;flex:none}.brand-photo{width:52px;height:52px;object-fit:cover;border:2px solid var(--gold);border-radius:50%;box-shadow:0 3px 10px #123b2d1a;flex:none}.brand-copy{display:block}.brand-kh{display:block;font-size:22px;line-height:1.2;letter-spacing:0;color:#98783a;margin:0 0 2px;font-weight:900;white-space:nowrap}.brand-en{display:block;font-size:12px;letter-spacing:.12em;line-height:1.2;color:var(--green)}.brand small{display:block;font-size:9px;letter-spacing:0;color:var(--muted);font-weight:600;margin-top:3px;white-space:nowrap}
+    .links{display:flex;align-items:center;gap:clamp(14px,2vw,24px);font-size:14px;color:#435148;white-space:nowrap;flex:none}.links a{position:relative;padding:9px 0;font-weight:600;transition:color .18s}.links a:after{content:"";position:absolute;left:0;right:0;bottom:3px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .18s}.links a:hover{color:var(--green2)}.links a:hover:after{transform:scaleX(1)}
+    .header-actions{display:flex;align-items:center;gap:9px;flex:none}
+    .lang-btn{border:1px solid var(--gold);background:#fffaf0;color:var(--green);border-radius:999px;padding:9px 12px;cursor:pointer;font-weight:800;font-size:12px}
+    .cart-btn,.btn{border:0;background:var(--green);color:white;border-radius:999px;padding:11px 16px;cursor:pointer;font-weight:700}.cart-btn{white-space:nowrap}
+    .cart-btn:hover,.btn:hover{background:var(--green2)}
+    main{max-width:1160px;margin:auto;padding:0 22px}
+    .welcome-scene{position:relative;isolation:isolate;overflow:hidden;min-height:300px;margin:20px 0 40px;padding:18px 16px 0;border:1px solid #d8c99e;border-radius:24px;background:linear-gradient(180deg,#eef4e9 0%,#f8f4e8 66%,#e7eddc 100%);box-shadow:0 12px 28px #123b2d12}
+    .welcome-landscape{position:absolute;inset:0;z-index:-1;width:100%;height:100%}
+    .welcome-stage{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:12px;max-width:900px;min-height:280px;margin:auto}
+    .welcome-character{width:clamp(110px,14vw,155px);height:auto;overflow:visible;filter:drop-shadow(0 6px 5px #123b2d1c);animation:welcome-bob 3.6s ease-in-out infinite}
+    .welcome-character-left{justify-self:end}
+    .welcome-character-right{justify-self:start;animation-delay:.3s}
+    .welcome-message{margin:0 0 94px;padding:12px 20px;border:1px solid var(--gold);border-radius:16px;background:#fffaf0eF;box-shadow:0 5px 16px #123b2d12;color:var(--green);font-size:clamp(22px,3vw,34px);font-weight:900;line-height:1.35;white-space:nowrap;animation:welcome-greet 4s ease-in-out infinite}
+    @keyframes welcome-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+    @keyframes welcome-greet{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+    @media(prefers-reduced-motion:reduce){.welcome-character,.welcome-message{animation:none}}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:0 0 18px}.section-head h2{margin:0;font-size:28px;letter-spacing:-.03em}.kh-sub{display:block;color:#98783a;font-size:14px;font-weight:600;margin-top:5px}.section-head p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+    .filter{border:1px solid var(--line);background:#fff;color:#46544b;border-radius:999px;padding:9px 15px;cursor:pointer;font-size:13px}
+    .filter.active{background:var(--green);color:#fff;border-color:var(--green)}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;margin-bottom:54px}
+    .card{background:#fffdf8;border:1px solid var(--line);border-radius:17px;overflow:hidden;transition:transform .18s,box-shadow .18s}
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #163b2912}
+    .photo{height:166px;display:grid;place-items:center;background:#edf2ec;font-size:76px}
+    .card-body{padding:15px}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--green2);font-weight:800}
+    .card h3{font-size:16px;margin:7px 0 5px}.desc{font-size:12px;color:var(--muted);min-height:32px;line-height:1.5}
+    .card-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:14px}
+    .price{font-weight:850;color:var(--green);font-size:17px}.unit{font-size:11px;color:var(--muted);font-weight:500}
+    .add{border:0;background:#e9f1eb;color:var(--green);width:35px;height:35px;border-radius:50%;font-size:21px;cursor:pointer}.add:hover{background:#d6e7da}
+    .note{background:#fff;border:1px solid var(--line);padding:20px;border-radius:16px;margin-bottom:42px;color:var(--muted);font-size:13px;line-height:1.7}
+    .contact-section{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px;margin:0 0 42px;padding:30px 34px;border:1px solid var(--gold);border-radius:20px;background:linear-gradient(120deg,var(--green),#1c6047);color:var(--cream);box-shadow:0 12px 28px #123b2d16}
+    .contact-section h2{margin:0;color:var(--cream);font-size:clamp(23px,3vw,30px);letter-spacing:-.02em}
+    .contact-section p{max-width:520px;margin:8px 0 0;color:#dce9df;font-size:14px;line-height:1.7}
+    .contact-links{display:flex;gap:12px}
+    .contact-link{display:flex;align-items:center;gap:11px;min-height:58px;padding:10px 16px;border:1px solid #c5a45a88;border-radius:14px;background:#ffffff0c;color:#fff;font-size:14px;font-weight:700;transition:background .18s,border-color .18s,transform .18s}
+    .contact-link:hover{transform:translateY(-2px);border-color:var(--gold);background:#ffffff1a}
+    .contact-link i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--cream);color:var(--green);font-size:16px}
+    footer{background:#102f24;color:#dce9df;padding:34px 22px}.foot{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{letter-spacing:.13em}.foot small{color:#b7cbbd}
+    .overlay{display:none;position:fixed;inset:0;background:#07170fc0;z-index:10;justify-content:flex-end}.overlay.open{display:flex}
+    .drawer{background:#fff;width:min(440px,100%);height:100%;padding:24px;overflow:auto;box-shadow:-12px 0 40px #0002}
+    .drawer-head{display:flex;justify-content:space-between;align-items:center}.drawer h2{margin:0}.close{border:0;background:#eef2ee;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:20px}
+    .cart-list{margin:22px 0}.cart-row{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14px}.cart-row small{display:block;color:var(--muted);margin-top:4px}
+    .qty{display:flex;align-items:center;gap:9px}.qty button{border:1px solid var(--line);background:#fff;border-radius:50%;width:27px;height:27px;cursor:pointer}
+    .total{display:flex;justify-content:space-between;font-size:18px;font-weight:850;padding:15px 0;border-top:1px solid var(--line)}
+    .checkout label{display:block;font-size:12px;font-weight:700;margin:13px 0 6px}.checkout input,.checkout select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff}
+    .checkout .btn{width:100%;margin-top:16px}.empty{color:var(--muted);text-align:center;padding:32px 0}
+    @media(max-width:850px){.products{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:700px){.contact-section{grid-template-columns:1fr;gap:20px;padding:26px}.contact-links{flex-wrap:wrap}}
+    @media(max-width:560px){.welcome-scene{min-height:220px;margin:14px 0 32px;padding:10px 8px 0;border-radius:18px}.welcome-stage{min-height:205px;gap:4px}.welcome-character{width:clamp(54px,17vw,96px)}.welcome-message{margin-bottom:70px;padding:9px 12px;border-radius:13px;font-size:clamp(17px,5vw,25px)}}
+    @media(max-width:580px){.links{display:none}}
+    @media(max-width:700px){.brand small{display:none}}
+    @media(max-width:560px){.nav{padding:12px 15px}.products{gap:11px}.photo{height:125px;font-size:58px}.card-body{padding:12px}.section-head h2{font-size:23px}main{padding:0 15px}.cart-btn{padding:10px 13px}}
+    @media(max-width:400px){.brand{gap:8px}.brand-photo{width:44px;height:44px}.brand-kh{font-size:20px}.brand-en{display:none}.header-actions{gap:6px}.lang-btn{padding:8px 9px}.cart-btn{padding:9px 10px}}
+    @media(max-width:380px){.contact-section{padding:22px}.contact-links{flex-direction:column}.contact-link{justify-content:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="top">ស្រស់ពីសមុទ្រ · អង្ករមានគុណភាព · រសជាតិបែបខ្មែរ</div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#"><img class="brand-photo" src="profile.png" alt="KEO CHAINA profile photo"><span class="brand-copy"><span class="brand-kh">កែវ​ ឆៃណា</span><span class="brand-en">KEO CHAINA</span><small>គ្រឿងសមុទ្រ នឹង អង្ករគ្រុប​ប្រភេទ</small></span></a>
+      <div class="links"><a id="navHome" href="#home">ទំព័រដើម</a><a id="navShop" href="#shop">ផលិតផល</a><a id="navAbout" href="#about">អំពីយើង</a></div>
+      <div class="header-actions"><button class="lang-btn" id="langToggle" onclick="toggleLanguage()">EN</button><button class="cart-btn" onclick="openCart()"><span id="cartLabel">កន្ត្រក</span> (<span id="cartCount">0</span>)</button></div>
+    </nav>
+  </header>
+  <main id="home">
+    <section class="welcome-scene" aria-labelledby="welcomeText">
+      <svg class="welcome-landscape" viewBox="0 0 1200 320" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="welcomeSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#edf5e9"/><stop offset="1" stop-color="#faf5e8"/></linearGradient>
+          <linearGradient id="welcomeField" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ddbd"/><stop offset="1" stop-color="#9fbe91"/></linearGradient>
+        </defs>
+        <rect width="1200" height="320" fill="url(#welcomeSky)"/>
+        <circle cx="600" cy="68" r="32" fill="#d8bb73" opacity=".72"/>
+        <path d="M0 178 Q165 97 328 171 T646 166 T965 149 T1200 163 V320 H0Z" fill="#d9e7d2"/>
+        <path d="M0 216 Q181 155 360 207 T720 196 T1064 186 T1200 195 V320 H0Z" fill="#bdd5b3"/>
+        <path d="M0 249 Q234 217 480 252 T954 240 T1200 248 V320 H0Z" fill="url(#welcomeField)"/>
+        <g fill="none" stroke="#eaf1d9" stroke-width="3" opacity=".75">
+          <path d="M55 278 Q300 239 510 278 T1000 268 T1250 278"/>
+          <path d="M-40 301 Q220 265 455 301 T920 291 T1240 300"/>
+        </g>
+        <g fill="none" stroke="#789b68" stroke-linecap="round" stroke-width="4" opacity=".75">
+          <path d="M72 253 Q82 225 91 202 M91 229 Q71 220 65 208 M85 218 Q104 211 109 197"/>
+          <path d="M1120 252 Q1110 224 1101 201 M1107 229 Q1127 220 1133 207 M1113 218 Q1094 210 1088 196"/>
+        </g>
+      </svg>
+      <div class="welcome-stage">
+        <svg class="welcome-character welcome-character-left" viewBox="0 0 160 260" aria-hidden="true" focusable="false">
+          <g class="welcome-character-art">
+            <ellipse cx="79" cy="244" rx="39" ry="8" fill="#496d48" opacity=".2"/>
+            <path d="M51 210 Q78 220 107 207 L115 232 Q109 243 92 244 H50 Q39 241 44 230Z" fill="#634d3b"/>
+            <path d="M47 151 L111 151 L107 218 Q80 231 48 218Z" fill="#c5a45a" stroke="#9e803e" stroke-width="2"/>
+            <path d="M47 166 Q80 173 110 163 L109 181 Q79 189 46 180Z" fill="#1c6047"/>
+            <path d="M46 190 Q78 199 109 188 M47 202 Q78 211 108 200" fill="none" stroke="#f4e9c9" stroke-width="3" opacity=".8"/>
+            <path d="M57 190 l6 5 -6 5 -6-5Z M88 194 l6 5 -6 5 -6-5Z" fill="#f3e4bb"/>
+            <path d="M53 98 Q79 88 103 99 L112 162 L45 162Z" fill="#1c6047" stroke="#164b38" stroke-width="2"/>
+            <path d="M66 97 L79 111 L92 97" fill="none" stroke="#e2c47a" stroke-width="4" stroke-linecap="round"/>
+            <path d="M73 113 L81 124 L89 113 L99 158 L62 158Z" fill="#e0c47f" opacity=".9"/>
+            <path d="M57 104 Q42 109 45 127 L67 143" fill="none" stroke="#1c6047" stroke-width="17" stroke-linecap="round"/>
+            <path d="M99 104 Q114 110 109 127 L96 142" fill="none" stroke="#1c6047" stroke-width="17" stroke-linecap="round"/>
+            <path d="M67 143 Q88 137 113 115 M96 142 Q107 131 120 115" fill="none" stroke="#d9926d" stroke-width="9" stroke-linecap="round"/>
+            <path d="M111 114 V91 Q111 85 116 85 Q121 85 121 91 V108 V88 Q121 82 126 82 Q131 82 131 88 V112 Q130 128 117 136 L98 146" fill="#d9926d" stroke="#bd7655" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M121 87 V111" fill="none" stroke="#bd7655" stroke-width="1.5" opacity=".8"/>
+            <path d="M77 83 L77 100 L91 105 L101 91" fill="#d9926d"/>
+            <path d="M49 61 Q47 34 68 26 Q94 17 108 40 Q114 53 108 72 Q104 91 81 94 Q57 91 49 72Z" fill="#d9926d"/>
+            <path d="M48 65 Q42 39 61 25 Q81 11 101 25 Q114 34 111 57 Q97 54 91 37 Q79 53 51 59Z" fill="#26342b"/>
+            <circle cx="50" cy="39" r="13" fill="#26342b"/>
+            <path d="M78 59 Q82 55 86 59 M94 57 Q98 54 102 58" fill="none" stroke="#49352d" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="83" cy="62" r="2" fill="#26342b"/><circle cx="99" cy="61" r="2" fill="#26342b"/>
+            <path d="M103 64 l6 5 -6 3 M89 76 Q97 83 105 76" fill="none" stroke="#9c5e49" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="59" cy="71" r="3" fill="#e99a7c" opacity=".8"/>
+          </g>
+        </svg>
+        <h1 class="welcome-message" id="welcomeText" lang="km">សូមស្វាគមន៍</h1>
+        <svg class="welcome-character welcome-character-right" viewBox="0 0 160 260" aria-hidden="true" focusable="false">
+          <g class="welcome-character-art" transform="translate(160 0) scale(-1 1)">
+            <ellipse cx="79" cy="244" rx="39" ry="8" fill="#496d48" opacity=".2"/>
+            <path d="M51 210 Q78 220 107 207 L115 232 Q109 243 92 244 H50 Q39 241 44 230Z" fill="#634d3b"/>
+            <path d="M47 151 L111 151 L107 218 Q80 231 48 218Z" fill="#c5a45a" stroke="#9e803e" stroke-width="2"/>
+            <path d="M47 166 Q80 173 110 163 L109 181 Q79 189 46 180Z" fill="#1c6047"/>
+            <path d="M46 190 Q78 199 109 188 M47 202 Q78 211 108 200" fill="none" stroke="#f4e9c9" stroke-width="3" opacity=".8"/>
+            <path d="M57 190 l6 5 -6 5 -6-5Z M88 194 l6 5 -6 5 -6-5Z" fill="#f3e4bb"/>
+            <path d="M53 98 Q79 88 103 99 L112 162 L45 162Z" fill="#1c6047" stroke="#164b38" stroke-width="2"/>
+            <path d="M66 97 L79 111 L92 97" fill="none" stroke="#e2c47a" stroke-width="4" stroke-linecap="round"/>
+            <path d="M73 113 L81 124 L89 113 L99 158 L62 158Z" fill="#e0c47f" opacity=".9"/>
+            <path d="M57 104 Q42 109 45 127 L67 143" fill="none" stroke="#1c6047" stroke-width="17" stroke-linecap="round"/>
+            <path d="M99 104 Q114 110 109 127 L96 142" fill="none" stroke="#1c6047" stroke-width="17" stroke-linecap="round"/>
+            <path d="M67 143 Q88 137 113 115 M96 142 Q107 131 120 115" fill="none" stroke="#d9926d" stroke-width="9" stroke-linecap="round"/>
+            <path d="M111 114 V91 Q111 85 116 85 Q121 85 121 91 V108 V88 Q121 82 126 82 Q131 82 131 88 V112 Q130 128 117 136 L98 146" fill="#d9926d" stroke="#bd7655" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M121 87 V111" fill="none" stroke="#bd7655" stroke-width="1.5" opacity=".8"/>
+            <path d="M77 83 L77 100 L91 105 L101 91" fill="#d9926d"/>
+            <path d="M49 61 Q47 34 68 26 Q94 17 108 40 Q114 53 108 72 Q104 91 81 94 Q57 91 49 72Z" fill="#d9926d"/>
+            <path d="M48 65 Q42 39 61 25 Q81 11 101 25 Q114 34 111 57 Q97 54 91 37 Q79 53 51 59Z" fill="#26342b"/>
+            <circle cx="50" cy="39" r="13" fill="#26342b"/>
+            <path d="M78 59 Q82 55 86 59 M94 57 Q98 54 102 58" fill="none" stroke="#49352d" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="83" cy="62" r="2" fill="#26342b"/><circle cx="99" cy="61" r="2" fill="#26342b"/>
+            <path d="M103 64 l6 5 -6 3 M89 76 Q97 83 105 76" fill="none" stroke="#9c5e49" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="59" cy="71" r="3" fill="#e99a7c" opacity=".8"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+    <section id="shop">
+      <div class="section-head"><div><h2 id="shopTitle">ផលិតផលរបស់យើង</h2><span class="kh-sub" id="shopSub">គ្រឿងសមុទ្រ និងអង្ករជ្រើសរើស</span><p id="shopIntro">ជ្រើសរើសផលិតផលដែលអ្នកចូលចិត្ត ហើយបន្ថែមទៅក្នុងកន្ត្រក។</p></div></div>
+      <div class="filters">
+        <button class="filter active" data-filter="All" id="filterAll">ផលិតផលទាំងអស់</button>
+        <button class="filter" data-filter="Seafood" id="filterSeafood">គ្រឿងសមុទ្រ</button>
+        <button class="filter" data-filter="Rice" id="filterRice">អង្ករ</button>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+    <section class="note" id="about"><strong id="aboutTitle" style="color:#17231d">អំពី KEO CHAINA</strong><br>
+      <span id="aboutText">KEO CHAINA នាំមកជូននូវគ្រឿងសមុទ្រ និងអង្ករដែលអ្នកអាចជ្រើសរើសបានយ៉ាងងាយស្រួល។ ផលិតផល និងតម្លៃគឺជាទិន្នន័យគំរូ។</span>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contactTitle">
+      <div>
+        <h2 id="contactTitle">ទាក់ទងមកយើង</h2>
+        <p id="contactText">ទាក់ទងមក KEO CHAINA តាមរយៈបណ្ដាញសង្គមរបស់យើង។</p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-link" id="contactFacebookLink" href="https://www.facebook.com/share/1EwjzCbgYQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i><span id="contactFacebookText">Facebook</span>
+        </a>
+        <a class="contact-link" id="contactTelegramLink" href="https://t.me/your-account" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-telegram" aria-hidden="true"></i><span id="contactTelegramText">Telegram</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="foot"><div><strong>KEO CHAINA</strong><br><small>គ្រឿងសមុទ្រ និងអង្ករ</small></div><small>© <span id="year"></span> KEO CHAINA. All rights reserved.</small></div></footer>
+
+  <div class="overlay" id="overlay" onclick="if(event.target===this)closeCart()">
+    <aside class="drawer">
+      <div class="drawer-head"><h2>កន្ត្រកទំនិញ</h2><button class="close" onclick="closeCart()">×</button></div>
+      <div class="cart-list" id="cartList"></div>
+      <div class="total"><span>Total</span><span id="total">$0.00</span></div>
+      <form class="checkout" id="orderForm">
+        <h3>ព័ត៌មានការកម្មង់</h3>
+        <label for="customer">ឈ្មោះរបស់អ្នក</label><input id="customer" required placeholder="Enter your name">
+        <label for="phone">លេខទូរស័ព្ទ</label><input id="phone" required type="tel" placeholder="Your phone number">
+        <label for="delivery">ដឹកជញ្ជូន / មកយកដោយខ្លួនឯង</label>
+        <select id="delivery"><option>ដឹកជញ្ជូន</option><option>មកយកដោយខ្លួនឯង</option></select>
+        <button class="btn" type="submit">ទិញឥឡូវនេះ</button>
+        <p id="checkoutNote" style="font-size:11px;color:#68756e;line-height:1.5">ការកម្មង់នឹងផ្ញើទៅ KEOCHAINA តាម Telegram ដើម្បីបញ្ជាក់។</p>
+      </form>
+    </aside>
+  </div>
+<script>
+const products = [
+  {id:1,name:"Fresh Shrimp",km:"បង្គាស្រស់",category:"Seafood",description:"Fresh shrimp for your favorite dishes.",kmDesc:"បង្គាស្រស់ សម្រាប់ម្ហូបឆ្ងាញ់ៗ។",price:8.00,unit:"per kg",kmUnit:"ក្នុង ១ គីឡូក្រាម",emoji:"🦐"},
+  {id:2,name:"Fresh Crab",km:"ក្តាមស្រស់",category:"Seafood",description:"Delicious crab, ready for your kitchen.",kmDesc:"ក្តាមស្រស់ មានរសជាតិឆ្ងាញ់។",price:10.00,unit:"per kg",kmUnit:"ក្នុង ១ គីឡូក្រាម",emoji:"🦀"},
+  {id:3,name:"Fresh Fish",km:"ត្រីស្រស់",category:"Seafood",description:"A fresh choice for everyday cooking.",kmDesc:"ត្រីស្រស់ សម្រាប់ម្ហូបប្រចាំថ្ងៃ។",price:5.00,unit:"per kg",kmUnit:"ក្នុង ១ គីឡូក្រាម",emoji:"🐟"},
+  {id:4,name:"Fresh Squid",km:"មឹកស្រស់",category:"Seafood",description:"Tender squid for a tasty meal.",kmDesc:"មឹកស្រស់ សាច់ទន់ និងឆ្ងាញ់។",price:7.00,unit:"per kg",kmUnit:"ក្នុង ១ គីឡូក្រាម",emoji:"🦑"},
+  {id:5,name:"Jasmine Rice",km:"អង្ករម្លិះ",category:"Rice",description:"Fragrant rice for daily family meals.",kmDesc:"អង្ករក្រអូប សម្រាប់អាហារគ្រួសារ។",price:18.00,unit:"per 10 kg",kmUnit:"ក្នុង ១០ គីឡូក្រាម",emoji:"🍚"},
+  {id:6,name:"White Rice",km:"អង្ករស",category:"Rice",description:"A versatile staple for your kitchen.",kmDesc:"អង្ករសម្រាប់បរិភោគប្រចាំថ្ងៃ។",price:12.00,unit:"per 10 kg",kmUnit:"ក្នុង ១០ គីឡូក្រាម",emoji:"🌾"},
+  {id:7,name:"Brown Rice",km:"អង្ករសម្រូប",category:"Rice",description:"Whole-grain rice with a hearty texture.",kmDesc:"អង្ករមិនទាន់កិនសំបកចេញទាំងស្រុង។",price:20.00,unit:"per 10 kg",kmUnit:"ក្នុង ១០ គីឡូក្រាម",emoji:"🌾"},
+  {id:8,name:"Premium Fragrant Rice",km:"អង្ករក្រអូបពិសេស",category:"Rice",description:"A premium fragrant rice selection.",kmDesc:"អង្ករក្រអូបគុណភាពខ្ពស់។",price:22.00,unit:"per 10 kg",kmUnit:"ក្នុង ១០ គីឡូក្រាម",emoji:"🍚"}
+];
+let language = "km";
+const words = {
+  en:{top:"FRESH FROM THE SEA · QUALITY RICE · CAMBODIAN ROOTS",home:"Home",shop:"Shop",about:"About us",cart:"Cart",eyebrow:"WELCOME TO KEOCHAINA",hero:"Fresh from the sea.<br>Goodness in every grain.",intro:"Discover seafood and quality rice inspired by the Cambodian countryside, for your family's everyday meals.",explore:"Explore products",shopTitle:"Our products",shopSub:"Carefully selected seafood and rice",shopIntro:"Choose your favorites and add them to your cart.",all:"All products",seafood:"Seafood",rice:"Rice",aboutTitle:"About KEOCHAINA",aboutText:"KEOCHAINA brings seafood and quality rice together in one simple shop. Product details and prices are sample content and must be confirmed before launch.",cartTitle:"Your cart",total:"Total",order:"Order details",yourName:"Your name",phone:"Phone number",method:"Delivery / pickup",delivery:"Delivery",pickup:"Pickup",copy:"Buy now",empty:"Your cart is empty. Add a product to get started.",copied:"Order summary copied! Send it to KEOCHAINA to confirm your order.",emptyAlert:"Your cart is empty.",topline:"FRESH SEAFOOD · QUALITY RICE · CAMBODIAN ROOTS"},
+  km:{top:"ស្រស់ពីសមុទ្រ · អង្ករមានគុណភាព · ដើមកំណើតខ្មែរ",home:"ទំព័រដើម",shop:"ផលិតផល",about:"អំពីយើង",cart:"កន្ត្រក",eyebrow:"សូមស្វាគមន៍មកកាន់ KEOCHAINA",hero:"រសជាតិស្រស់ពីសមុទ្រ។<br>គុណភាពល្អគ្រប់គ្រាប់អង្ករ។",intro:"ស្វែងរកគ្រឿងសមុទ្រ និងអង្ករមានគុណភាព ដែលមានរសជាតិ និងអត្តសញ្ញាណជនបទកម្ពុជា សម្រាប់គ្រួសាររបស់អ្នក។",explore:"មើលផលិតផល",shopTitle:"ផលិតផលរបស់យើង",shopSub:"គ្រឿងសមុទ្រ និងអង្ករជ្រើសរើស",shopIntro:"ជ្រើសរើសផលិតផលដែលអ្នកចូលចិត្ត ហើយបន្ថែមទៅក្នុងកន្ត្រក។",all:"ផលិតផលទាំងអស់",seafood:"គ្រឿងសមុទ្រ",rice:"អង្ករ",aboutTitle:"អំពី KEOCHAINA",aboutText:"KEOCHAINA នាំមកជូននូវគ្រឿងសមុទ្រ និងអង្ករដែលមានគុណភាព នៅកន្លែងតែមួយ។ ព័ត៌មានផលិតផល និងតម្លៃនៅទីនេះគឺជាទិន្នន័យគំរូ ហើយត្រូវបញ្ជាក់មុនពេលដាក់ឱ្យប្រើប្រាស់។",cartTitle:"កន្ត្រកទំនិញ",total:"សរុប",order:"ព័ត៌មានការកម្មង់",yourName:"ឈ្មោះរបស់អ្នក",phone:"លេខទូរស័ព្ទ",method:"ដឹកជញ្ជូន / មកយកដោយខ្លួនឯង",delivery:"ដឹកជញ្ជូន",pickup:"មកយកដោយខ្លួនឯង",copy:"ទិញឥឡូវនេះ",empty:"កន្ត្រកទំនិញរបស់អ្នកនៅទទេ។ សូមបន្ថែមផលិតផល។",copied:"បានចម្លងព័ត៌មានការកម្មង់ហើយ! សូមផ្ញើទៅ KEOCHAINA ដើម្បីបញ្ជាក់។",emptyAlert:"កន្ត្រកទំនិញរបស់អ្នកនៅទទេ។",topline:"ស្រស់ពីសមុទ្រ · អង្ករមានគុណភាព · ដើមកំណើតខ្មែរ"}
+};
+const orderStatus = {
+  en:{
+    sending:"Sending order...",
+    sent:"Your order was sent to KEOCHAINA via Telegram.",
+    failed:"We couldn't send your order. Please try again.",
+    note:"Your order will be sent to KEOCHAINA through Telegram for confirmation."
+  },
+  km:{
+    sending:"កំពុងផ្ញើការកម្មង់...",
+    sent:"បានផ្ញើការកម្មង់ទៅ KEOCHAINA តាម Telegram ហើយ។",
+    failed:"មិនអាចផ្ញើការកម្មង់បានទេ។ សូមព្យាយាមម្ដងទៀត។",
+    note:"ការកម្មង់នឹងផ្ញើទៅ KEOCHAINA តាម Telegram ដើម្បីបញ្ជាក់។"
+  }
+};
+const contactCopy = {
+  en:{
+    title:"Contact Us",
+    text:"Get in touch with KEO CHAINA through our social channels.",
+    facebook:"Visit us on Facebook",
+    telegram:"Chat with us on Telegram"
+  },
+  km:{
+    title:"ទាក់ទងមកយើង",
+    text:"ទាក់ទងមក KEO CHAINA តាមរយៈបណ្ដាញសង្គមរបស់យើង។",
+    facebook:"Facebook",
+    telegram:"Telegram"
+  }
+};
+let cart = {};
+let activeFilter = "All";
+const money = n => "$" + n.toFixed(2);
+function renderProducts(){
+  const shown = products.filter(p=>activeFilter==="All"||p.category===activeFilter);
+  document.getElementById("products").innerHTML = shown.map(p=>{
+    const name=language==="km"?p.km:p.name, desc=language==="km"?p.kmDesc:p.description;
+    const category=language==="km"?(p.category==="Rice"?"អង្ករ":"គ្រឿងសមុទ្រ"):p.category;
+    const unit=language==="km"?p.kmUnit:p.unit;
+    return `<article class="card"><div class="photo" role="img" aria-label="${name}">${p.emoji}</div>
+    <div class="card-body"><div class="tag">${category}</div><h3>${name}</h3><div class="desc">${desc}</div>
+    <div class="card-bottom"><div class="price">${money(p.price)} <span class="unit">${unit}</span></div>
+    <button class="add" aria-label="Add ${name}" onclick="addToCart(${p.id})">+</button></div></div></article>`;
+  }).join("");
+}
+function applyLanguage(){
+  const t=words[language];
+  document.documentElement.lang=language;
+  document.querySelector(".top").textContent=t.topline;
+  document.getElementById("navHome").textContent=t.home;
+  document.getElementById("navShop").textContent=t.shop;
+  document.getElementById("navAbout").textContent=t.about;
+  document.getElementById("cartLabel").textContent=t.cart;
+  document.getElementById("langToggle").textContent=language==="km"?"EN":"ខ្មែរ";
+  document.getElementById("shopTitle").textContent=t.shopTitle;
+  document.getElementById("shopSub").textContent=t.shopSub;
+  document.getElementById("shopIntro").textContent=t.shopIntro;
+  document.getElementById("filterAll").textContent=t.all;
+  document.getElementById("filterSeafood").textContent=t.seafood;
+  document.getElementById("filterRice").textContent=t.rice;
+  document.getElementById("aboutTitle").textContent=t.aboutTitle;
+  document.getElementById("aboutText").textContent=t.aboutText;
+  document.getElementById("contactTitle").textContent=contactCopy[language].title;
+  document.getElementById("contactText").textContent=contactCopy[language].text;
+  document.getElementById("contactFacebookText").textContent=contactCopy[language].facebook;
+  document.getElementById("contactTelegramText").textContent=contactCopy[language].telegram;
+  document.querySelector(".drawer h2").textContent=t.cartTitle;
+  document.querySelector(".total span:first-child").textContent=t.total;
+  document.querySelector(".checkout h3").textContent=t.order;
+  document.querySelector('label[for="customer"]').textContent=t.yourName;
+  document.querySelector('label[for="phone"]').textContent=t.phone;
+  document.querySelector('label[for="delivery"]').textContent=t.method;
+  document.getElementById("checkoutNote").textContent=orderStatus[language].note;
+  document.getElementById("delivery").innerHTML=`<option>${t.delivery}</option><option>${t.pickup}</option>`;
+  document.querySelector("#orderForm .btn").textContent=t.copy;
+  renderProducts();updateCart();
+}
+function toggleLanguage(){language=language==="km"?"en":"km";applyLanguage()}
+function addToCart(id){cart[id]=(cart[id]||0)+1;updateCart()}
+function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];updateCart()}
+function updateCart(){
+  const count=Object.values(cart).reduce((a,b)=>a+b,0);
+  document.getElementById("cartCount").textContent=count;
+  const entries=Object.entries(cart);
+  document.getElementById("cartList").innerHTML=entries.length?entries.map(([id,qty])=>{
+    const p=products.find(x=>x.id===Number(id));
+    return `<div class="cart-row"><div><strong>${language==="km"?p.km:p.name}</strong><small>${money(p.price)} ${language==="km"?p.kmUnit:p.unit}</small></div><div class="qty"><button type="button" onclick="changeQty(${p.id},-1)">−</button><b>${qty}</b><button type="button" onclick="changeQty(${p.id},1)">+</button></div></div>`;
+  }).join(""):'<div class="empty">'+words[language].empty+'</div>';
+  const total=entries.reduce((sum,[id,qty])=>sum+products.find(p=>p.id===Number(id)).price*qty,0);
+  document.getElementById("total").textContent=money(total);
+}
+function openCart(){document.getElementById("overlay").classList.add("open")}
+function closeCart(){document.getElementById("overlay").classList.remove("open")}
+document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{
+  activeFilter=btn.dataset.filter;
+  document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===btn));
+  renderProducts();
+}));
+document.getElementById("orderForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  if(!Object.keys(cart).length){alert(words[language].emptyAlert);return}
+  const form=e.currentTarget;
+  const submitButton=form.querySelector('button[type="submit"]');
+  const lines=Object.entries(cart).map(([id,qty])=>{const p=products.find(x=>x.id===Number(id));return `${language==="km"?p.km:p.name} x ${qty} — ${money(p.price*qty)}`});
+  const total=Object.entries(cart).reduce((s,[id,q])=>s+products.find(p=>p.id===Number(id)).price*q,0);
+  const msg=`${language==="km"?"ការកម្មង់ KEO CHAINA":"KEO CHAINA ORDER"}\n${words[language].yourName}: ${document.getElementById("customer").value}\n${words[language].phone}: ${document.getElementById("phone").value}\n${words[language].method}: ${document.getElementById("delivery").value}\n\n${lines.join("\n")}\n\n${words[language].total}: ${money(total)}`;
+  submitButton.disabled=true;
+  submitButton.textContent=orderStatus[language].sending;
+  try{
+    const response=await fetch("/api/order",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({text:msg})
+    });
+    const result=await response.json();
+    if(!response.ok||!result.ok)throw new Error("Telegram order request failed.");
+    alert(orderStatus[language].sent);
+    cart={};
+    updateCart();
+    form.reset();
+    closeCart();
+  }catch(error){
+    console.error("Could not send order to Telegram.",error);
+    alert(orderStatus[language].failed);
+  }finally{
+    submitButton.disabled=false;
+    submitButton.textContent=words[language].copy;
+  }
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+applyLanguage();
+</script>
+</body>
+</html>
